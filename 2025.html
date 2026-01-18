@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Title - Max Meyer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c2c2c;
+            background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd5 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #fefdfb;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            padding: 50px 60px;
+            border: 1px solid rgba(200,190,180,0.2);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #8b7355;
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #5d4e37;
+        }
+
+        .post-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(150,130,110,0.15);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #5d4e37;
+            margin-bottom: 15px;
+            font-weight: 400;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+        }
+
+        .post-meta {
+            font-size: 0.95em;
+            color: #8b7355;
+            font-style: italic;
+        }
+
+        .post-content h2 {
+            font-size: 1.8em;
+            color: #5d4e37;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .post-content h3 {
+            font-size: 1.4em;
+            color: #5d4e37;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .post-content p {
+            font-size: 1.05em;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .post-content ul, .post-content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .post-content li {
+            font-size: 1.05em;
+            color: #4a4a4a;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid #d4c4b0;
+            padding-left: 25px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #5d5d5d;
+        }
+
+        .post-content code {
+            background: #f5efe7;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #5d4e37;
+        }
+
+        .post-content pre {
+            background: #f5efe7;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 20px 0;
+            border: 1px solid rgba(150,130,110,0.15);
+        }
+
+        .post-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .post-footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(150,130,110,0.15);
+            text-align: center;
+        }
+
+        .post-footer a {
+            color: #5d4e37;
+            text-decoration: none;
+            padding: 10px 26px;
+            background: #d4c4b0;
+            border-radius: 6px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(150,130,110,0.2);
+        }
+
+        .post-footer a:hover {
+            background: #c4b5a3;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 35px 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .post-content h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <article>
+            <header class="post-header">
+                <h1>Your Blog Post Title Here</h1>
+                <div class="post-meta">January 18, 2026 • Max Meyer</div>
+            </header>
+
+            <div class="post-content">
+                <p>
+                    This is the opening paragraph of your blog post. Start with something engaging that draws the reader in and sets the stage for what you'll be discussing.
+                </p>
+
+                <h2>Main Section Heading</h2>
+                <p>
+                    Write your main content here. You can have multiple paragraphs exploring your topic in depth. This template uses the same warm, serif styling as your main website.
+                </p>
+
+                <p>
+                    Continue developing your ideas. Break up long sections with subheadings to make the content more scannable and easier to read.
+                </p>
+
+                <h3>Subsection</h3>
+                <p>
+                    You can use H3 headings for subsections within your main sections. This helps organize more complex posts.
+                </p>
+
+                <ul>
+                    <li>You can add bullet points for lists</li>
+                    <li>They're useful for breaking down key points</li>
+                    <li>Or listing items in a structured way</li>
+                </ul>
+
+                <blockquote>
+                    "You can include quotes using blockquote tags. They'll be styled with a subtle left border and italics."
+                </blockquote>
+
+                <p>
+                    If you need to reference code, you can use inline <code>code snippets</code> or larger code blocks:
+                </p>
+
+                <pre><code>function example() {
+    console.log("Code blocks look like this");
+    return true;
+}</code></pre>
+
+                <h2>Another Main Section</h2>
+                <p>
+                    Continue with your next main point or topic. Keep paragraphs focused and concise for better readability.
+                </p>
+
+                <p>
+                    End with a conclusion that wraps up your main points or provides a call to action for your readers.
+                </p>
+            </div>
+
+            <footer class="post-footer">
+                <a href="index.html">← Back to Home</a>
+            </footer>
+        </article>
+    </div>
+</body>
+</html>
