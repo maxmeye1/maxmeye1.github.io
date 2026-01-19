@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Max Meyer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c2c2c;
+            background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd5 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fefdfb;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            padding: 60px 50px;
+            border: 1px solid rgba(200,190,180,0.2);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #8b7355;
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #5d4e37;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(150,130,110,0.15);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #5d4e37;
+            margin-bottom: 12px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.15em;
+            color: #8b7355;
+            font-style: italic;
+        }
+
+        .blog-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .post-card {
+            padding: 30px;
+            background: #f5efe7;
+            border-radius: 10px;
+            border: 1px solid rgba(150,130,110,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(93, 78, 55, 0.12);
+            background: #f0e9df;
+        }
+
+        .post-card h2 {
+            font-size: 1.8em;
+            color: #5d4e37;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .post-card h2 a {
+            color: #5d4e37;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .post-card h2 a:hover {
+            color: #8b7355;
+        }
+
+        .post-meta {
+            font-size: 0.9em;
+            color: #8b7355;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .post-excerpt {
+            font-size: 1.05em;
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #5d4e37;
+            text-decoration: none;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #8b7355;
+        }
+
+        .read-more::after {
+            content: " →";
+        }
+
+        .no-posts {
+            text-align: center;
+            padding: 60px 20px;
+            color: #8b7355;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .post-card {
+                padding: 25px 20px;
+            }
+
+            .post-card h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <div class="header">
+            <h1>Blog</h1>
+            <p class="subtitle">Thoughts, ideas, and reflections</p>
+        </div>
+
+        <div class="blog-posts">
+            <!-- Blog Post 1 -->
+            <article class="post-card">
+                <h2><a href="2025.html">An Intro</a></h2>
+                <div class="post-meta">January 18, 2026</div>
+                <p class="post-excerpt">
+                    A bit about me.
+                </p>
+                <a href="2025.html" class="read-more">Read more</a>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="post-card">
+                <h2><a href="blog2.html">2025 - Looking Back and Moving Forward</a></h2>
+                <div class="post-meta">January 18?, 2026</div>
+                <p class="post-excerpt">
+                    An epic about how 2025 treated me.
+                </p>
+                <a href="blog2.html" class="read-more">Read more</a>
+            </article>
+
+
+            <!-- Add more blog posts here by copying the article.post-card structure -->
+        </div>
+    </div>
+</body>
+</html>
