@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Max Meyer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c2c2c;
+            background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd5 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fefdfb;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            padding: 60px 50px;
+            border: 1px solid rgba(200,190,180,0.2);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #8b7355;
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #5d4e37;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(150,130,110,0.15);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #5d4e37;
+            margin-bottom: 12px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.15em;
+            color: #8b7355;
+            font-style: italic;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: #f5efe7;
+            border-radius: 12px;
+            padding: 35px 30px;
+            border: 1px solid rgba(150,130,110,0.15);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(93, 78, 55, 0.15);
+            background: #f0e9df;
+        }
+
+        .project-card h2 {
+            font-size: 1.6em;
+            color: #5d4e37;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .project-type {
+            font-size: 0.85em;
+            color: #8b7355;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .project-description {
+            font-size: 1.02em;
+            color: #4a4a4a;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            font-size: 0.85em;
+            padding: 5px 12px;
+            background: #e8dfd5;
+            border-radius: 4px;
+            color: #5d5d5d;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .project-links a {
+            padding: 8px 20px;
+            background: #d4c4b0;
+            color: #3d3328;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(150,130,110,0.2);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .project-links a:hover {
+            background: #c4b5a3;
+            transform: translateY(-1px);
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #5d4e37;
+            margin-bottom: 25px;
+            margin-top: 50px;
+            font-weight: 400;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(150,130,110,0.2);
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <div class="header">
+            <h1>Projects</h1>
+            <p class="subtitle">Things I've built and am building</p>
+        </div>
+
+        <!-- Current Projects -->
+        <h2 class="section-title">Current Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-type">Web Development</div>
+                <h2>Personal Website</h2>
+                <p class="project-description">
+                    A clean, modern personal website built with vanilla HTML and CSS. Features a blog, project showcase, and to-do tracker.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">GitHub Pages</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/maxmeyer/website" target="_blank">GitHub</a>
+                    <a href="https://maxmeyer.github.io" target="_blank">Live Site</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-type">Design</div>
+                <h2>Portfolio Redesign</h2>
+                <p class="project-description">
+                    Exploring new design directions for my portfolio. Focusing on accessibility, typography, and user experience.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">UI/UX</span>
+                    <span class="tech-tag">Prototyping</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">View Designs</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Past Projects -->
+        <h2 class="section-title">Past Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-type">Application</div>
+                <h2>Task Manager</h2>
+                <p class="project-description">
+                    A simple task management application for tracking personal projects and daily to-dos with priority levels.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">LocalStorage</span>
+                    <span class="tech-tag">CSS</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-type">Writing</div>
+                <h2>Tech Blog</h2>
+                <p class="project-description">
+                    A collection of articles about web development, design patterns, and lessons learned from building projects.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Writing</span>
+                    <span class="tech-tag">Documentation</span>
+                </div>
+                <div class="project-links">
+                    <a href="blog.html">Read Posts</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-type">Experiment</div>
+                <h2>Design System</h2>
+                <p class="project-description">
+                    A reusable component library and style guide for consistent design across personal projects.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">Components</span>
+                    <span class="tech-tag">Documentation</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">View System</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
