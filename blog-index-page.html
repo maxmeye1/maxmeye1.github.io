@@ -3,193 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Max Meyer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.7;
-            color: #2c2c2c;
-            background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd5 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fefdfb;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-            padding: 60px 50px;
-            border: 1px solid rgba(200,190,180,0.2);
-        }
-
-        .back-link {
-            display: inline-block;
-            color: #8b7355;
-            text-decoration: none;
-            margin-bottom: 30px;
-            font-size: 0.95em;
-            transition: color 0.3s ease;
-        }
-
-        .back-link:hover {
-            color: #5d4e37;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid rgba(150,130,110,0.15);
-        }
-
-        h1 {
-            font-size: 2.8em;
-            color: #5d4e37;
-            margin-bottom: 12px;
-            font-weight: 400;
-            letter-spacing: -0.5px;
-        }
-
-        .subtitle {
-            font-size: 1.15em;
-            color: #8b7355;
-            font-style: italic;
-        }
-
-        .blog-posts {
-            display: flex;
-            flex-direction: column;
-            gap: 35px;
-        }
-
-        .post-card {
-            padding: 30px;
-            background: #f5efe7;
-            border-radius: 10px;
-            border: 1px solid rgba(150,130,110,0.15);
-            transition: all 0.3s ease;
-        }
-
-        .post-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(93, 78, 55, 0.12);
-            background: #f0e9df;
-        }
-
-        .post-card h2 {
-            font-size: 1.8em;
-            color: #5d4e37;
-            margin-bottom: 10px;
-            font-weight: 400;
-        }
-
-        .post-card h2 a {
-            color: #5d4e37;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .post-card h2 a:hover {
-            color: #8b7355;
-        }
-
-        .post-meta {
-            font-size: 0.9em;
-            color: #8b7355;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .post-excerpt {
-            font-size: 1.05em;
-            color: #4a4a4a;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .read-more {
-            color: #5d4e37;
-            text-decoration: none;
-            font-size: 0.95em;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .read-more:hover {
-            color: #8b7355;
-        }
-
-        .read-more::after {
-            content: " →";
-        }
-
-        .no-posts {
-            text-align: center;
-            padding: 60px 20px;
-            color: #8b7355;
-            font-style: italic;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 30px;
-            }
-
-            h1 {
-                font-size: 2.2em;
-            }
-
-            .post-card {
-                padding: 25px 20px;
-            }
-
-            .post-card h2 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+    <title>Writing - Max Meyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">← Back to Home</a>
-        
-        <div class="header">
-            <h1>Blog</h1>
-            <p class="subtitle">Thoughts, ideas, and reflections</p>
-        </div>
+    <div class="field-page">
+        <header class="field-head">
+            <h1 class="field-title">Writing <span>Thoughts, ideas, and reflections.</span></h1>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects-page.html">Projects</a></li>
+                    <li><a href="blog-index-page.html" aria-current="page">Writing</a></li>
+                    <li><a href="coursework-page.html">Coursework</a></li>
+                    <li><a href="todo.html">To-do</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="blog-posts">
-            <!-- Blog Post 1 -->
-            <article class="post-card">
-                <h2><a href="2025.html">An Intro</a></h2>
-                <div class="post-meta">January 18, 2026</div>
-                <p class="post-excerpt">
-                    A bit about me.
-                </p>
-                <a href="2025.html" class="read-more">Read more</a>
-            </article>
+        <main class="board">
+            <!-- The notes are built from content/writing.js -->
+            <ul class="notes" id="notes"></ul>
+            </nav>
+        </header>
 
-            <!-- Blog Post 2 -->
-            <article class="post-card">
-                <h2><a href="blog2.html">2025 - Looking Back and Moving Forward</a></h2>
-                <div class="post-meta">January 18?, 2026</div>
-                <p class="post-excerpt">
-                    An epic about how 2025 treated me.
-                </p>
-                <a href="blog2.html" class="read-more">Read more</a>
-            </article>
-
-
-            <!-- Add more blog posts here by copying the article.post-card structure -->
-        </div>
+        <main class="board">
+            <!-- One sticky note per post: copy an <li> to add one.
+                 Colour: change --note to var(--note-1) ... var(--note-4).
+                 To hide a post: add the word `hidden` to its <li> (as on the first one)
+                 and add <meta name="robots" content="noindex, nofollow"> to the post's <head>.
+                 The URL still works for anyone who has it; this only removes it from the board and from search engines. -->
+            <ul class="notes">
+                <li hidden>
+                    <a class="note" href="blog2.html" style="--note: var(--note-2)">
+                        <span class="note-date">January 18?, 2026</span>
+                        <span class="note-title">2025 - Looking Back and Moving Forward</span>
+                        <span class="note-text">An epic about how 2025 treated me.</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="note" href="2025.html" style="--note: var(--note-1)">
+                        <span class="note-date">January 18, 2026</span>
+                        <span class="note-title">An Intro</span>
+                        <span class="note-text">A bit about me.</span>
+                    </a>
+                </li>
+            </ul>
+        </main>
     </div>
+
+    <script src="render.js"></script>
+    <script src="content/writing.js"></script>
+    <script>
+        document.getElementById('notes').innerHTML = POSTS.filter(function (p) {
+            return !p.hidden && p.board !== false;
+        }).map(function (p) {
+            return '<li><a class="note" href="post.html?p=' + encodeURIComponent(p.id) + '" style="--note: var(--note-' + (p.color || 1) + ')">' +
+                '<span class="note-date">' + inlineMarkup(p.date || '') + '</span>' +
+                '<span class="note-title">' + inlineMarkup(p.title || p.heading || '') + '</span>' +
+                '<span class="note-text">' + inlineMarkup(p.blurb || '') + '</span></a></li>';
+        }).join('');
+    </script>
+    <script>
+        /* Clicking a note zooms it to fill the screen, then opens the post. */
+        (function () {
+            const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            let zoom = null;
+
+            document.querySelectorAll('.note').forEach(function (note) {
+                note.addEventListener('click', function (e) {
+                    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || reduce) return;
+                    e.preventDefault();
+                    const href = note.href, r = note.getBoundingClientRect(), cs = getComputedStyle(note);
+                    const angle = new DOMMatrix(cs.transform === 'none' ? undefined : cs.transform);
+                    const deg = Math.atan2(angle.b, angle.a) * 180 / Math.PI;
+
+                    zoom = document.createElement('div');
+                    zoom.className = 'note-zoom';
+                    zoom.style.background = cs.backgroundColor;
+                    zoom.innerHTML = note.innerHTML;
+                    document.body.appendChild(zoom);
+                    note.style.visibility = 'hidden';
+
+                    const from = { left: r.left + 'px', top: r.top + 'px', width: r.width + 'px', height: r.height + 'px', transform: 'rotate(' + deg + 'deg)' };
+                    const to = { left: '0px', top: '0px', width: window.innerWidth + 'px', height: window.innerHeight + 'px', transform: 'rotate(0deg)' };
+                    zoom.animate([from, to], { duration: 520, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards' });
+                    zoom.querySelectorAll('span').forEach(function (s) {
+                        s.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 260, fill: 'forwards' });
+                    });
+                    // Settle into the page colour so the post appears seamlessly.
+                    const bg = getComputedStyle(document.body).backgroundColor;
+                    zoom.animate([{ backgroundColor: cs.backgroundColor }, { backgroundColor: bg }],
+                        { duration: 220, delay: 480, fill: 'forwards', easing: 'ease-in' }).finished.then(function () {
+                            location.href = href;
+                        });
+                });
+            });
+
+            // Coming back with the back button: put the board back as it was.
+            window.addEventListener('pageshow', function (e) {
+                if (!e.persisted) return;
+                if (zoom) { zoom.remove(); zoom = null; }
+                document.querySelectorAll('.note').forEach(function (n) { n.style.visibility = ''; });
+            });
+        })();
+    </script>
 </body>
 </html>

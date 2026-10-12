@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursework - Max Meyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- The entries come from content/coursework.js -->
+    <div class="container" id="page">
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+
+    <script src="render.js"></script>
+    <script src="content/coursework.js"></script>
+    <script>
+        (function () {
+            const page = document.getElementById('page');
+            COURSEWORK.forEach(function (section) {
+                const head = document.createElement('div');
+                head.className = 'header';
+                head.innerHTML = '<h1></h1><p class="subtitle"></p>';
+                head.querySelector('h1').textContent = section.heading;
+                head.querySelector('p').textContent = section.subtitle || '';
+                page.appendChild(head);
+                const ul = document.createElement('ul');
+                ul.className = 'course-list';
+                (section.items || []).forEach(function (item) {
+                    const li = document.createElement('li');
+                    li.className = 'course-item';
+                    li.innerHTML = '<div class="course-title">' + inlineMarkup(item.title || '') + '</div>' +
+                        (item.detail ? '<div class="course-textbook">' + inlineMarkup(item.detail) + '</div>' : '');
+                    ul.appendChild(li);
+                });
+                page.appendChild(ul);
+            });
+        })();
+    </script>
+</body>
+</html>

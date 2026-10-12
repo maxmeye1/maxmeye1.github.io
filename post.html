@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Meyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Shows one post from content/. The text lives in content/posts/<id>.js,
+         and its title/date in content/writing.js. Open as post.html?p=<id>. -->
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="blog-index-page.html" class="back-link" id="back">← Back to Blogs</a>
+
+        <article>
+            <header class="post-header">
+                <h1 id="heading"></h1>
+                <div class="post-meta" id="meta"></div>
+            </header>
+            <div class="post-content" id="body"></div>
+            <footer class="post-footer">
+                <a href="index.html">← Back to Home</a>
+            </footer>
+        </article>
+    </div>
+
+    <script src="render.js"></script>
+    <script src="content/about.js"></script>
+    <script src="content/writing.js"></script>
+    <script>
+        (function () {
+            const id = new URLSearchParams(location.search).get('p');
+            const post = POSTS.filter(function (p) { return p.id === id; })[0];
+            const heading = document.getElementById('heading'), body = document.getElementById('body');
+            if (!post) {
+                heading.textContent = 'Not found';
+                body.innerHTML = '<p>There’s no post called “' + (id || '') + '”. <a href="blog-index-page.html">See all writing</a>.</p>';
+                return;
+            }
+            if (post.hidden) {
+                const m = document.createElement('meta');
+                m.name = 'robots'; m.content = 'noindex, nofollow';
+                document.head.appendChild(m);
+            }
+            const title = post.heading || post.title;
+            document.title = title + ' - ' + ABOUT.name;
+            heading.textContent = title;
+            document.getElementById('meta').textContent = [post.date, ABOUT.name].filter(Boolean).join(' • ');
+            if (post.back) {
+                const back = document.getElementById('back');
+                back.textContent = post.back.label;
+                back.href = post.back.url;
+            }
+            const s = document.createElement('script');
+            s.src = 'content/posts/' + encodeURIComponent(id) + '.js';
+            s.onload = function () { body.innerHTML = markup(window.POST_BODY); };
+            s.onerror = function () { body.innerHTML = '<p>Couldn’t load content/posts/' + id + '.js.</p>'; };
+            document.body.appendChild(s);
+        })();
+    </script>
+</body>
+</html>

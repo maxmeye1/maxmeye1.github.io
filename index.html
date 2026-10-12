@@ -4,194 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max Meyer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.7;
-            color: #2c2c2c;
-            background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd5 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 750px;
-            background: #fefdfb;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-            padding: 60px 50px;
-            animation: fadeIn 0.8s ease-out;
-            border: 1px solid rgba(200,190,180,0.2);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid rgba(150,130,110,0.15);
-        }
-
-        h1 {
-            font-size: 2.8em;
-            color: #5d4e37;
-            margin-bottom: 12px;
-            font-weight: 400;
-            letter-spacing: -0.5px;
-        }
-
-        .tagline {
-            font-size: 1.15em;
-            color: #8b7355;
-            font-weight: 300;
-            font-style: italic;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-size: 1.5em;
-            color: #5d4e37;
-            margin-bottom: 18px;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-        }
-
-        p {
-            font-size: 1.05em;
-            color: #4a4a4a;
-            margin-bottom: 16px;
-            line-height: 1.8;
-        }
-
-        .links {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .links a {
-            padding: 10px 26px;
-            background: #d4c4b0;
-            color: #3d3328;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            font-weight: 400;
-            font-size: 0.95em;
-            border: 1px solid rgba(150,130,110,0.2);
-        }
-
-        .links a:hover {
-            background: #c4b5a3;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(93, 78, 55, 0.15);
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .skill {
-            padding: 8px 18px;
-            background: #f5efe7;
-            border-radius: 6px;
-            font-size: 0.93em;
-            color: #5d5d5d;
-            border: 1px solid rgba(150,130,110,0.15);
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 30px;
-            }
-
-            h1 {
-                font-size: 2.2em;
-            }
-
-            .tagline {
-                font-size: 1.05em;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Max Meyer</h1>
-            <p class="tagline">.</p>
-        </div>
-        
-        <div class="section">
-            <h2>Other Sections</h2>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="blog-index-page.html">Blog</a>
-                <a href="photos.html">Photos?</a>
-                <a href="todo.html">To-Do</a>
-                <a href="coursework-page.html">Coursework</a>
-
-            </nav> 
-        </div>
-        
-
-        <div class="section">
-            <h2>About Me</h2>
-            <p>
-                Hello, مرحبان, bonjour, hola. I'm Max, a current Epic employee and (relatively) recent graduuate of the University of Minnesota, where
-                I studied pure math and minored in computer science and Asian and Middle Eastern Studies. Currently in 
-                Madison, Wisconsin.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Skills - Rework</h2>
-            <div class="skills">
-                <span class="skill">Math + CS</span>
-                <span class="skill">Spelling</span>
-                <span class="skill">Foreign Languages {Arabic + French + Spanish} </span>
-                <span class="skill">Project Management</span>
-                <span class="skill">Creative Thinking</span>
+    <div class="home">
+        <header class="hero" id="hero">
+            <div class="worldmap" id="worldmap">
+                <h1 class="map-title" id="map-title">Max Meyer</h1>
+                <svg aria-hidden="true" focusable="false" preserveAspectRatio="none">
+                    <path class="dots"/>
+                    <path class="dots dots-mid"/>
+                    <path class="dots dots-small"/>
+                </svg>
+                <!-- Pins come from places.js -->
             </div>
+            <button class="scroll-cue" type="button" aria-label="Scroll down"></button>
+        </header>
+
+        <div class="below" id="below">
+            <!-- About and Contact come from content/about.js -->
+            <main class="bio">
+                <section>
+                    <p class="label">About</p>
+                    <div id="about"></div>
+                </section>
+
+                <section>
+                    <p class="label">Contact</p>
+                    <ul class="contact" id="contact"></ul>
+                </section>
+            </main>
+
+            <nav class="side-nav" aria-label="Site">
+                <ul>
+                    <li><a href="projects-page.html">Projects</a></li>
+                    <li><a href="blog-index-page.html">Writing</a></li>
+                    <li><a href="coursework-page.html">Coursework</a></li>
+                    <li><a href="todo.html">To-do</a></li>
+                </ul>
+            </nav>
         </div>
 
-        <div class="section">
-            <h2>Contact Info</h2>
-            <div class="links">
-                <a href="mailto:maxmeyer1@live.com">Email</a>
-                <a href="https://www.linkedin.com/in/maxemeyer/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/maxmeye1" target="_blank">GitHub</a>
-                <a href="https://x.com/mmeyerumn" target="_blank">Twitter</a>
-            </div>
-        </div>
+        <footer class="site-foot">&copy; 2026 Max Meyer</footer>
     </div>
+
+    <script src="render.js"></script>
+    <script src="content/about.js"></script>
+    <script src="content/places.js"></script>
+    <script>
+        document.getElementById('map-title').textContent = ABOUT.name;
+        document.getElementById('about').innerHTML = markup(ABOUT.about);
+        document.getElementById('contact').innerHTML = ABOUT.contact.map(function (c) {
+            const external = /^https?:/.test(c.url);
+            return '<li><a href="' + c.url + '"' + (external ? ' target="_blank" rel="noopener"' : '') + '>' + inlineMarkup(c.label) + '</a></li>';
+        }).join('');
+    </script>
+    <script src="home.js"></script>
 </body>
 </html>
